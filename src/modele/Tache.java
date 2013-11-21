@@ -22,7 +22,15 @@ public abstract class Tache {
 		this.duree += d;
 	}
 	
-	//calculer duree moyenne tache
+	// retourne la durée moyenne d'une tache
+	public float moyenneTempsTache(){
+		float retour;
+		
+		if (this.cpt == 0) retour = -1; 
+		else retour = this.duree / this.cpt;
+		
+		return retour;	
+	}
 	
 	
 
