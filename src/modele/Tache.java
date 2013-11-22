@@ -9,21 +9,29 @@ public abstract class Tache {
 	private int cpt; //le nombre de fois ou la tache a été effectué
 	private float tempsMoyen;
 	
-	
 	public Tache(){
 		this.duree=0;
 		this.cpt=0;
 		this.tempsMoyen=-1;
 	}
-	
+
+	public String getNom() {
+		return nom;
+	}
+
 	//consutructeur pour les classes filles
-	public Tache(String n){
+	public Tache(String n, int id){
 		this.nom = n;
 		this.duree=0;
 		this.cpt=0;
+		this.id = id;
 	}
 	
 	public abstract void effectuerTache();
+
+	public int getId() {
+		return id;
+	}
 
 	public void incrementerCompteur(){
 		this.cpt ++;
@@ -57,13 +65,6 @@ public abstract class Tache {
 		System.out.println(Float.toString(temps));
 	}
 
-	@Override
-	public String toString() {
-		return "Tache [nom=" + nom + ", duree=" + duree
-				+ ", cpt=" + cpt + ", tempsMoyen=" + tempsMoyen + "]";
-	}
-	
-	
 	
 
 }
