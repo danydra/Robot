@@ -1,4 +1,6 @@
-package modele;
+package tache;
+
+import modele.Tache;
 
 
 public class TacheElectricite extends Tache{
@@ -10,9 +12,9 @@ public class TacheElectricite extends Tache{
 
 
 	@Override
-	public synchronized void effectuerTache() {
+	public synchronized int effectuerTache() {
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 	
 	

@@ -1,4 +1,6 @@
-package modele;
+package tache;
+
+import modele.Tache;
 
 
 public class TachePoser extends Tache
@@ -11,7 +13,7 @@ public class TachePoser extends Tache
 	}
 
 	@Override
-	public void effectuerTache() {
+	public int effectuerTache() {
 
 		long deb = start();
 		System.out.println(this.getNom());
@@ -28,6 +30,7 @@ public class TachePoser extends Tache
 		
 		stop(deb);
 		
+		return 0;
 	}
 	
 

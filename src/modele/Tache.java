@@ -1,5 +1,7 @@
 package modele;
 
+import java.util.Random;
+
 public abstract class Tache {
 	
 	
@@ -10,6 +12,8 @@ public abstract class Tache {
 	private float tempsMoyen;
 	
 	public Tache(){
+		this.id = 0;
+		this.nom="";
 		this.duree=0;
 		this.cpt=0;
 		this.tempsMoyen=-1;
@@ -27,7 +31,7 @@ public abstract class Tache {
 		this.id = id;
 	}
 	
-	public abstract void effectuerTache();
+	public abstract int effectuerTache();
 
 	public int getId() {
 		return id;
@@ -63,6 +67,15 @@ public abstract class Tache {
 		this.incrementerCompteur();
 		this.tempsMoyen = moyenneTempsTache();
 		System.out.println(Float.toString(temps));
+	}
+	
+	// l'energie perdu pour le robot prendre un nombre aléatoire compris entre 7 et 33
+	public static int energieLost(){
+		int max = 33; int min = 7;
+		Random rand = new Random();
+		int nombreAleatoire = rand.nextInt(max - min + 1) + min;
+	
+		return nombreAleatoire;
 	}
 
 	

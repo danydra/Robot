@@ -1,4 +1,6 @@
-package modele;
+package tache;
+
+import modele.Tache;
 
 
 
@@ -9,12 +11,14 @@ public class TacheMonter extends Tache{
 	}
 
 	@Override
-	public synchronized void effectuerTache() {
+	public synchronized int effectuerTache() {
 		long deb = start();
 		 
 		System.out.println(this.getNom());
 		
 		stop(deb);
+		
+		return 0;
 	}
 
 }

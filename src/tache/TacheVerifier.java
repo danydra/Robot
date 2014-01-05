@@ -1,4 +1,6 @@
-package modele;
+package tache;
+
+import modele.Tache;
 
 
 public class TacheVerifier extends Tache{
@@ -10,8 +12,10 @@ public class TacheVerifier extends Tache{
 
 
 	@Override
-	public synchronized void effectuerTache() {
+	public synchronized int effectuerTache() {
 		// TODO Auto-generated method stub
+		
+		return 0;
 		
 	}
 	

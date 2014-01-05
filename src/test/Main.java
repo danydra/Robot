@@ -2,6 +2,8 @@ package test;
 
 import java.util.ArrayList;
 
+import tache.TachePoser;
+
 
 import modele.*;
 
@@ -21,8 +23,16 @@ public class Main {
 		Tache t5 = new TachePoser();
 		Tache t6 = new TachePoser();
 		
-		Robot r1 = new Robot();
-		Robot r2 = new Robot();
+		Base base = new Base();
+		base.ajouterTache(t1, 1);
+		base.ajouterTache(t2, 1);
+		base.ajouterTache(t3, 1);
+		base.ajouterTache(t4, 1);
+		base.ajouterTache(t5, 1);
+		
+
+		Robot r1 = new Robot(base);
+		Robot r2 = new Robot(base);
 		
 		r1.start();
 		r2.start();
@@ -36,7 +46,7 @@ public class Main {
 			ex.printStackTrace();
 		}
 		
-		
+
 			
 		
 
