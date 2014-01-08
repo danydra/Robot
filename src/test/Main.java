@@ -2,7 +2,7 @@ package test;
 
 import java.util.ArrayList;
 
-import tache.TachePoser;
+import tache.*;
 
 
 import modele.*;
@@ -14,25 +14,20 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		
-		ArrayList<Tache> f = new ArrayList<Tache>();
+		ArrayList<Tache> f1 = new ArrayList<Tache>();
+		ArrayList<Tache> f2 = new ArrayList<Tache>();
 		
-		Tache t1 = new TachePoser();
-		Tache t2 = new TachePoser();
-		Tache t3 = new TachePoser();
-		Tache t4 = new TachePoser();
-		Tache t5 = new TachePoser();
-		Tache t6 = new TachePoser();
+		Tache t1 = new TacheAcheminer();
+
+		
+		f1.add(t1);f1.add(t1);f1.add(t1);
+		f2.add(t1);f2.add(t1);f2.add(t1);
 		
 		Base base = new Base();
-		base.ajouterTache(t1, 1);
-		base.ajouterTache(t2, 1);
-		base.ajouterTache(t3, 1);
-		base.ajouterTache(t4, 1);
-		base.ajouterTache(t5, 1);
-		
 
-		Robot r1 = new Robot(base);
-		Robot r2 = new Robot(base);
+
+		Robot r1 = new Robot(base, f1);
+		Robot r2 = new Robot(base, f2);
 		
 		r1.start();
 		r2.start();

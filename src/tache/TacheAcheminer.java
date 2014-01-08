@@ -1,5 +1,7 @@
 package tache;
 
+import java.util.Random;
+
 import modele.Tache;
 
 
@@ -8,10 +10,9 @@ public class TacheAcheminer extends Tache {
 	public TacheAcheminer() {
 		super("Acheminer matériaux",2);	
 	}
-
-	@Override
+	
 	public int effectuerTache() {
-
+		System.out.println("Je fais la tache");
 		
 		long deb = start();
 		System.out.println(this.getNom());
@@ -25,17 +26,18 @@ public class TacheAcheminer extends Tache {
 			// TODO Auto-generated catch block
 			e.printStackTrace();System.out.println("erreur chrono");
 		}
-		
+	
 		stop(deb);
 		
-		return energieLost();
+		return 0;
 		
 	}
 	
 	public static void main(String[] args) {
+		
 		int val = 0 ;int cpt=0;
 		for (int i=0; i<5000000 ; i++){
-			val = energieLost();
+			//val = energieLost();
 			
 			if (val > 33 || val < 7) {
 				cpt++;

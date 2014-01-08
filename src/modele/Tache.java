@@ -68,15 +68,6 @@ public abstract class Tache {
 		this.tempsMoyen = moyenneTempsTache();
 		System.out.println(Float.toString(temps));
 	}
-	
-	// l'energie perdu pour le robot prendre un nombre aléatoire compris entre 7 et 33
-	public static int energieLost(){
-		int max = 33; int min = 7;
-		Random rand = new Random();
-		int nombreAleatoire = rand.nextInt(max - min + 1) + min;
-	
-		return nombreAleatoire;
-	}
 
 	
 
