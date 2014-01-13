@@ -44,52 +44,31 @@ public class Robot extends Thread{
 		int nb = rand.nextInt(3) + 0;
 		return sesTaches.get(nb);
 	}
-/*	
-	 public void run(){
-		while (true){
-			if (charge < 34){
-				//
-				// faire un code d'une file d'attente
-			}
-			else{
-				System.out.println("Je suis " + id);
-				this.tache = chosirTache();
-				charge -= this.tache.effectuerTache();
-			}
-	
-			System.out.println("");
-		}
-				
-	}
-*/
-	 public void run(){
-			//for (int i=0; i<20; i++){
+
+	public void run(){
+		int energie=0;
 		 while (true){
-				//System.out.println("Je suis le robot " + this.id + " mon niveau " + charge);
-				if (charge < 30 ){
-					//System.out.println(this.id + "TRY");
-					if (base.placeFile()){
-						base.recharger(this);
-					}
-					else{
-						//System.out.println(this.id + " PAUSE");
-						try {
-							Thread.sleep(100);
-						} catch (InterruptedException e) {
-							e.printStackTrace();
-						}
-						
-					}
-						
+			if (charge < 30 ){
+				if (base.placeFile()){
+					base.recharger(this);
 				}
 				else{
-					//System.out.println("Je suis " + this.id);
-					this.tache = chosirTache();
-					charge -= this.tache.effectuerTache();
-				}
+					try {
+						Thread.sleep(100);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}					
+				}				
 			}
-					
+			else{
+				this.tache = chosirTache();
+				energie = this.tache.effectuerTache();
+				charge -= energie;
+				//System.out.println(this.id + "- effectue la tache " + this.tache.getNom() + "");
+			}
 		}
+					
+	}
 
 
 	
