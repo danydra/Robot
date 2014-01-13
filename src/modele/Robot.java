@@ -27,6 +27,10 @@ public class Robot extends Thread{
 		this.base = b;
 	}
 	
+	public int getIdRobot(){
+		return this.id;
+	}
+	
 	public int getCharge() {
 		return charge;
 	}
@@ -38,14 +42,13 @@ public class Robot extends Thread{
 	private Tache chosirTache() {
 		Random rand = new Random();
 		int nb = rand.nextInt(3) + 0;
-		//syso
 		return sesTaches.get(nb);
 	}
-	
+/*	
 	 public void run(){
 		while (true){
 			if (charge < 34){
-				//base.recharger(this);
+				//
 				// faire un code d'une file d'attente
 			}
 			else{
@@ -58,12 +61,37 @@ public class Robot extends Thread{
 		}
 				
 	}
+*/
+	 public void run(){
+			//for (int i=0; i<20; i++){
+		 while (true){
+				//System.out.println("Je suis le robot " + this.id + " mon niveau " + charge);
+				if (charge < 30 ){
+					//System.out.println(this.id + "TRY");
+					if (base.placeFile()){
+						base.recharger(this);
+					}
+					else{
+						//System.out.println(this.id + " PAUSE");
+						try {
+							Thread.sleep(100);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+						
+					}
+						
+				}
+				else{
+					//System.out.println("Je suis " + this.id);
+					this.tache = chosirTache();
+					charge -= this.tache.effectuerTache();
+				}
+			}
+					
+		}
 
 
-	public static void main (String[] args){ 
-	
-
-	}
 	
 	
 }

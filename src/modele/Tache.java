@@ -2,6 +2,7 @@ package modele;
 
 import java.util.Random;
 
+
 public abstract class Tache {
 	
 	
@@ -60,15 +61,24 @@ public abstract class Tache {
 		
 	}
 	
-	public void stop(long deb){
+	public int stop(long deb){
 	    long fin = System.currentTimeMillis();
-	    float temps = (fin -deb) / 1000F;
+	    float temps = (fin -deb);
 	    this.ajouterDuree(temps);
 		this.incrementerCompteur();
 		this.tempsMoyen = moyenneTempsTache();
-		System.out.println(Float.toString(temps));
+		//System.out.println(Float.toString(temps));
+		//return (int) temps;
+		return 40;
 	}
+	
+	
+	public static void main (String[] args){ 
+		
 
+	}
+	
+	
 	
 
 }

@@ -1,7 +1,7 @@
 package tache;
 
 import java.util.Random;
-
+import modele.Tableau;
 import modele.Tache;
 
 
@@ -12,39 +12,37 @@ public class TacheAcheminer extends Tache {
 	}
 	
 	public int effectuerTache() {
-		System.out.println("Je fais la tache");
 		
+		//lancer chrono tache
 		long deb = start();
-		System.out.println(this.getNom());
+		//System.out.println(this.getNom());
 		
-		int nb = (int) (Math.random()*9+1);
-		System.out.println("ma tache dure " + nb + " secondes");
-		nb=nb*100;
-		try {
-			Thread.sleep(nb);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();System.out.println("erreur chrono");
-		}
-	
-		stop(deb);
+		Tableau t = new Tableau();
 		
-		return 0;
+		//triInsertion
+	    for(int i=1;i<t.taille;i++){
+            int memory=t.tab[i]; int compt=i-1;
+            boolean marqueur;
+            do{
+                marqueur=false;
+                if (t.tab[compt]>memory){
+                    t.tab[compt+1]=t.tab[compt];
+                    compt--;
+                    marqueur=true;
+                 }
+                if (compt<0) marqueur=false;
+            }
+            while(marqueur);
+            t.tab[compt+1]=memory;
+        }
+        
+		return stop(deb);
 		
 	}
 	
-	public static void main(String[] args) {
-		
-		int val = 0 ;int cpt=0;
-		for (int i=0; i<5000000 ; i++){
-			//val = energieLost();
-			
-			if (val > 33 || val < 7) {
-				cpt++;
-				System.out.println(val);
-			}
-		}
-		System.out.println(cpt);
+	
+	
+	public static void main (String[] args){ 
 	}
 
 }
