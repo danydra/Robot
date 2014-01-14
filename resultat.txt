@@ -1,0 +1,17 @@
+---Robot---
+
+Les Robots
+
+Robot n°3 a effectué 4 tache(s), le temps moyen pour effectuer une tache est 32.75 , s'est recharger 1 fois.
+Robot n°2 a effectué 5 tache(s), le temps moyen pour effectuer une tache est 38.2 , s'est recharger 2 fois.
+Robot n°4 a effectué 7 tache(s), le temps moyen pour effectuer une tache est 39.714287 , s'est recharger 3 fois.
+Robot n°1 a effectué 6 tache(s), le temps moyen pour effectuer une tache est 25.666666 , s'est recharger 1 fois.
+Robot n°5 a effectué 5 tache(s), le temps moyen pour effectuer une tache est 16.6 , s'est recharger 1 fois.
+
+Les Taches
+
+La tache Poser mur a effectué 3 fois, le temps moyen pour effectuer une tache est 22.333334
+La tache Vérifier etat travaux a effectué 5 fois, le temps moyen pour effectuer une tache est 9.0
+La tache Acheminer matériaux a effectué 9 fois, le temps moyen pour effectuer une tache est 23.0
+La tache Faire electricite a effectué 3 fois, le temps moyen pour effectuer une tache est 49.333332
+La tache Monter charpente a effectué 7 fois, le temps moyen pour effectuer une tache est 52.857143
