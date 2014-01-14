@@ -60,6 +60,9 @@ public class Main {
 			ex.printStackTrace();
 		}
 		
+		base.getStat().ecrire();
+		System.err.println("Terminer");
+		
 	}
 
 }

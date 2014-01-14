@@ -22,13 +22,16 @@ public class TachePoser extends Tache
 		
 		
 		Tableau t = new Tableau();
+		tri(t);
 		
-		triFusion(t.tab,0,t.taille-1);
 		
 		return stop(deb);
 		
 	}	
 	
+	public void tri(Tableau t){
+		triFusion(t.tab,0,t.taille-1);
+	}
 	
 	private static  void triFusion(int tab[],int deb,int fin){
 	    if (deb!=fin){
@@ -72,17 +75,7 @@ public class TachePoser extends Tache
 	}
 
 	
-	public static void main (String[] args){ 
-		Tableau t = new Tableau();
-		
-		//for(int i=0; i<t.taille;i++)System.out.println( i+ " -- "+ t.tab[i]);
-		triFusion(t.tab,0,t.taille-1);
-		//System.out.println("----------");
-		//for(int i=0; i<t.taille;i++)System.out.println( i+ " -- "+ t.tab[i]);
-		t.verif();
-		
-		
-	}
+
 	
 
 	

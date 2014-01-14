@@ -12,16 +12,20 @@ public class TacheMonter extends Tache{
 	}
 
 	@Override
-	public synchronized int effectuerTache() {
+	public int effectuerTache() {
 		//lancer chrono tache
 		long deb = start();
 		//System.out.println(this.getNom());
 		
 		
 		Tableau t = new Tableau();
+		tri(t);
+
+		return stop(deb);
 		
-		//triSelection
-		
+	}
+	
+	public void tri (Tableau t){
 		int temp;
 		 // Parcours du tableau.
 	     for(int i = 0; i < t.taille - 1; i++){
@@ -38,9 +42,6 @@ public class TacheMonter extends Tache{
 		     t.tab[min] = temp;
 		      
 	      }
-
-		return stop(deb);
-		
 	}
 	
 	public static void main (String[] args){ 

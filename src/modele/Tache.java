@@ -5,55 +5,42 @@ import java.util.Random;
 
 public abstract class Tache {
 	
-	
 	private int id;
 	private String nom;
-	private float duree; // le cumule des durées d'éxécution de la tache
-	private int cpt; //le nombre de fois ou la tache a été effectué
-	private float tempsMoyen;
+	private float tempsTotal;
+	private int nbAppel;
 	
 	public Tache(){
 		this.id = 0;
 		this.nom="";
-		this.duree=0;
-		this.cpt=0;
-		this.tempsMoyen=-1;
+		this.tempsTotal=0;
+		this.nbAppel=0;
 	}
 
 	public String getNom() {
 		return nom;
 	}
+	
+	
+
+	public float getTempsTotal() {
+		return tempsTotal;
+	}
+
+	public int getNbAppel() {
+		return nbAppel;
+	}
 
 	//consutructeur pour les classes filles
 	public Tache(String n, int id){
 		this.nom = n;
-		this.duree=0;
-		this.cpt=0;
 		this.id = id;
 	}
 	
 	public abstract int effectuerTache();
-
+	
 	public int getId() {
 		return id;
-	}
-
-	public void incrementerCompteur(){
-		this.cpt ++;
-	}
-	
-	public void ajouterDuree(float d){
-		this.duree += d;
-	}
-	
-	// retourne la durée moyenne d'une tache
-	public float moyenneTempsTache(){
-		float retour;
-		
-		if (this.cpt == 0) retour = -1; 
-		else retour = this.duree / this.cpt;
-		
-		return retour;	
 	}
 	
 	public long start(){
@@ -64,18 +51,15 @@ public abstract class Tache {
 	public int stop(long deb){
 	    long fin = System.currentTimeMillis();
 	    float temps = (fin -deb);
-	    this.ajouterDuree(temps);
-		this.incrementerCompteur();
-		this.tempsMoyen = moyenneTempsTache();
-		//System.out.println(Float.toString(temps));
-		//return (int) temps;
-		return 40;
+		return (int) temps;
 	}
 	
 	
-	public static void main (String[] args){ 
-		
 
+
+	public void ajoutStat(int ener) {
+		this.nbAppel ++;
+		this.tempsTotal += ener;		
 	}
 	
 	

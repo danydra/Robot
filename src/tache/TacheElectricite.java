@@ -21,19 +21,23 @@ public class TacheElectricite extends Tache{
 		
 		Tableau t = new Tableau();
 		
-		//triABulle
-		for (int i=0 ;i<=(t.taille-2);i++){
-			for (int j=(t.taille-1);i < j;j--){
-				if (t.tab[j] < t.tab[j-1]){
-                    int x=t.tab[j-1];
-                    t.tab[j-1]=t.tab[j];
-                    t.tab[j]=x;
-                 }
-			}
-		}
+		tri(t);
 	       
 		return stop(deb);
 		
+	}
+	
+	public void tri (Tableau t){
+		//triABulle
+				for (int i=0 ;i<=(t.taille-2);i++){
+					for (int j=(t.taille-1);i < j;j--){
+						if (t.tab[j] < t.tab[j-1]){
+		                    int x=t.tab[j-1];
+		                    t.tab[j-1]=t.tab[j];
+		                    t.tab[j]=x;
+		                 }
+					}
+				}
 	}
 	
 	

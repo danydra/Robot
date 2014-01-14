@@ -19,10 +19,14 @@ public class TacheVerifier extends Tache{
 		
 		
 		Tableau t = new Tableau();
-		triRapide(t.tab,0,t.taille-1);
+		tri(t);
 		
 		return stop(deb);
 		
+	}
+	
+	public void tri(Tableau t){
+		triRapide(t.tab,0,t.taille-1);
 	}
 	
 	private static int partitionner(int tab[],int deb,int fin){

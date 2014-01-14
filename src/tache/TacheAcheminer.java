@@ -20,7 +20,14 @@ public class TacheAcheminer extends Tache {
 		Tableau t = new Tableau();
 		
 		//triInsertion
-	    for(int i=1;i<t.taille;i++){
+	    tri(t);
+        
+		return stop(deb);
+		
+	}
+	
+	public void tri(Tableau t){
+		for(int i=1;i<t.taille;i++){
             int memory=t.tab[i]; int compt=i-1;
             boolean marqueur;
             do{
@@ -36,10 +43,7 @@ public class TacheAcheminer extends Tache {
             t.tab[compt+1]=memory;
         }
         
-		return stop(deb);
-		
 	}
-	
 	
 	
 	public static void main (String[] args){ 

@@ -6,14 +6,14 @@ public class Tableau {
 
 	public int taille;
 	public int []tab;
-	public static final int MAXNBELMT = 10000;
+	public static final int MAXNBELMT = 2000;
+	public static final int MINNBELMT = 4000;
 	public static final int MAXVALEUR = 1000;
 	
 	public Tableau(){
 		//la taille du tableau 
 		Random rand = new Random();
-		this.taille = rand.nextInt(MAXNBELMT) + 1;
-		//this.taille=25;
+		this.taille = rand.nextInt(MAXNBELMT) + MINNBELMT;
 		this.tab = new int [taille];
 		
 		for(int i=0; i<taille;i++){
