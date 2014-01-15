@@ -10,21 +10,9 @@ public class TacheMonter extends Tache{
 	public TacheMonter() {
 		super("Monter charpente",3);	
 	}
-
-	@Override
-	public int effectuerTache() {
-		//lancer chrono tache
-		long deb = start();
-		//System.out.println(this.getNom());
-		
-		
-		Tableau t = new Tableau();
-		tri(t);
-
-		return stop(deb);
-		
-	}
 	
+	
+
 	public void tri (Tableau t){
 		int temp;
 		 // Parcours du tableau.

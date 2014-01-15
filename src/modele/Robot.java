@@ -24,7 +24,7 @@ public class Robot extends Thread{
 		this.id=this.cpt;
 		this.charge = 100;
 		this.nbRechargement=0;
-		this.tache = new TachePoser(); // A REVOIR
+		this.tache = new TachePoser(); 
 		this.tempsTotalTravail = 0;
 		this.nbTacheFait = 0;
 		sesTaches = st;
@@ -73,8 +73,9 @@ public class Robot extends Thread{
 
 	public void run(){
 		int energie=0;
+		int bou=0;
 		 //while (true){
-		for (int bou=0; bou<base.NBTACHE;bou++){
+		for (bou=0; bou<base.NBTACHE;bou++){
 			if (charge < 30 ){
 				if (base.placeFile()){
 					base.recharger(this);
@@ -84,19 +85,21 @@ public class Robot extends Thread{
 						Thread.sleep(100);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
-					}					
+					}
+					bou-=1;
 				}				
 			}
 			else{
 				this.tache = chosirTache();
 				energie = this.tache.effectuerTache();
 				base.setStatistique(this, this.tache, energie);
-				if (this.charge - energie < 0 ) this.charge =0;
+				if (this.charge - energie < 0 ) this.charge =1;
 				else charge -= energie;
 				//System.out.println(this.id + " - Effectue la tache " + this.tache.getNom() + " qui a consommé " + energie + " d'energie.");
 				System.out.println(this.id + " - Effectue la tache " + this.tache.getNom() + " il lui reste " + this.charge + "% d'energie.");
 			}
 		}
+		//System.err.println(this.id + " " + bou );
 					
 	}
 

@@ -2,16 +2,16 @@
 
 Les Robots
 
-Robot n°3 a effectué 4 tache(s), le temps moyen pour effectuer une tache est 32.75 , s'est recharger 1 fois.
-Robot n°2 a effectué 5 tache(s), le temps moyen pour effectuer une tache est 38.2 , s'est recharger 2 fois.
-Robot n°4 a effectué 7 tache(s), le temps moyen pour effectuer une tache est 39.714287 , s'est recharger 3 fois.
-Robot n°1 a effectué 6 tache(s), le temps moyen pour effectuer une tache est 25.666666 , s'est recharger 1 fois.
-Robot n°5 a effectué 5 tache(s), le temps moyen pour effectuer une tache est 16.6 , s'est recharger 1 fois.
+Robot n°2 a effectué 8 tache(s), le temps moyen pour effectuer une tache est 22.875 , s'est recharger 2 fois.
+Robot n°5 a effectué 21 tache(s), le temps moyen pour effectuer une tache est 7.5238094 , s'est recharger 2 fois.
+Robot n°4 a effectué 2 tache(s), le temps moyen pour effectuer une tache est 48.5 , s'est recharger 1 fois.
+Robot n°1 a effectué 78 tache(s), le temps moyen pour effectuer une tache est 25.423077 , s'est recharger 22 fois.
+Robot n°3 a effectué 86 tache(s), le temps moyen pour effectuer une tache est 15.069767 , s'est recharger 14 fois.
 
 Les Taches
 
-La tache Poser mur a effectué 3 fois, le temps moyen pour effectuer une tache est 22.333334
-La tache Vérifier etat travaux a effectué 5 fois, le temps moyen pour effectuer une tache est 9.0
-La tache Acheminer matériaux a effectué 9 fois, le temps moyen pour effectuer une tache est 23.0
-La tache Faire electricite a effectué 3 fois, le temps moyen pour effectuer une tache est 49.333332
-La tache Monter charpente a effectué 7 fois, le temps moyen pour effectuer une tache est 52.857143
+La tache Poser mur a effectué 43 fois, le temps moyen pour effectuer une tache est 2.6046512
+La tache Vérifier etat travaux a effectué 35 fois, le temps moyen pour effectuer une tache est 1.8857143
+La tache Acheminer matériaux a effectué 49 fois, le temps moyen pour effectuer une tache est 16.061224
+La tache Faire electricite a effectué 21 fois, le temps moyen pour effectuer une tache est 35.238094
+La tache Monter charpente a effectué 47 fois, le temps moyen pour effectuer une tache est 42.80851

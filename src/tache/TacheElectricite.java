@@ -10,22 +10,9 @@ public class TacheElectricite extends Tache{
 		super("Faire electricite",5);	
 	}
 
+	
 
 
-	public int effectuerTache() {
-		
-		//lancer chrono tache
-		long deb = start();
-		//System.out.println(this.getNom());
-		
-		
-		Tableau t = new Tableau();
-		
-		tri(t);
-	       
-		return stop(deb);
-		
-	}
 	
 	public void tri (Tableau t){
 		//triABulle

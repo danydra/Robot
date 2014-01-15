@@ -33,7 +33,7 @@ public class Tableau {
 
 	}
 	
-	public void verif (){
+	public boolean verif (){
 		int j=0;int cpt=0;
 		for (int i=1; i<this.taille;i++){
 			if(this.tab[i]< this.tab[j] ){
@@ -41,8 +41,8 @@ public class Tableau {
 			}
 			j++;
 		}
-		if (cpt ==0 ) System.out.println("NO PROBLEM");
-		else System.out.println("PROBLEM");
+		if (cpt ==0 ) return true;
+		else return false;
 			
 	}
 	

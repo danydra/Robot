@@ -10,21 +10,8 @@ public class TacheVerifier extends Tache{
 		super("Vérifier etat travaux",4);	
 	}
 
-	@Override
-	public int effectuerTache() {
-		
-		//lancer chrono tache
-		long deb = start();
-		//System.out.println(this.getNom());
-		
-		
-		Tableau t = new Tableau();
-		tri(t);
-		
-		return stop(deb);
-		
-	}
 	
+
 	public void tri(Tableau t){
 		triRapide(t.tab,0,t.taille-1);
 	}

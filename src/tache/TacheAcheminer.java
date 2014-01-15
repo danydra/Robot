@@ -11,20 +11,7 @@ public class TacheAcheminer extends Tache {
 		super("Acheminer matériaux",2);	
 	}
 	
-	public int effectuerTache() {
-		
-		//lancer chrono tache
-		long deb = start();
-		//System.out.println(this.getNom());
-		
-		Tableau t = new Tableau();
-		
-		//triInsertion
-	    tri(t);
-        
-		return stop(deb);
-		
-	}
+	
 	
 	public void tri(Tableau t){
 		for(int i=1;i<t.taille;i++){

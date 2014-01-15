@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Base{ 
 
-	public static final long NBTACHE = 10;
+	public static final long NBTACHE = 100;
 	public static final long TEMPSRECHARGEMENT = 500;
 	private boolean libre;
 	private ArrayList<Robot> fileAttente;
@@ -20,6 +20,10 @@ public class Base{
 	
 	public boolean placeFile(){
 		return (this.fileAttente.size() < 3);
+	}
+	
+	public int getNbFil(){
+		return this.fileAttente.size();
 	}
 	
 	public Statistique getStat() {

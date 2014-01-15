@@ -13,21 +13,6 @@ public class TachePoser extends Tache
 		super("Poser mur",1);	
 	}
 
-	@Override
-	public int effectuerTache() {
-		
-		//lancer chrono tache
-		long deb = start();
-		//System.out.println(this.getNom());
-		
-		
-		Tableau t = new Tableau();
-		tri(t);
-		
-		
-		return stop(deb);
-		
-	}	
 	
 	public void tri(Tableau t){
 		triFusion(t.tab,0,t.taille-1);

@@ -37,7 +37,22 @@ public abstract class Tache {
 		this.id = id;
 	}
 	
-	public abstract int effectuerTache();
+	//public abstract int effectuerTache();
+	public int effectuerTache() {
+		
+		//lancer chrono tache
+		long deb = start();
+		//System.out.println(this.getNom());
+		
+		Tableau t = new Tableau();
+		
+		//triInsertion
+	    tri(t);
+        
+		return stop(deb);
+		
+	}
+	
 	
 	public int getId() {
 		return id;
@@ -61,7 +76,8 @@ public abstract class Tache {
 		this.nbAppel ++;
 		this.tempsTotal += ener;		
 	}
-	
+
+	public abstract void tri(Tableau t);
 	
 	
 
